@@ -83,3 +83,14 @@ Na raiz do projeto tem a **collection do Postman** com variáveis pré-configura
 - `{{jwt}}` → Token JWT obtido após login  
 
 ---
+
+## ✅ Checklist de Entrega
+
+- [x] Estrutura em NestJS com módulos (auth, users, books, prisma)  
+- [x] DTOs + ValidationPipe  
+- [x] Auth JWT + RolesGuard  
+- [x] CRUD de livros  
+- [x] Empréstimo e devolução  
+- [x] Collection Postman  
+- [x] README  
+
