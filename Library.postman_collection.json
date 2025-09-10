@@ -17,7 +17,13 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\": \"Nicolas\",\r\n    \"email\": \"Nicolas@teste.com\",\r\n    \"password\": \"1Nik!!!sss\"\r\n}"
@@ -41,7 +47,13 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\": \"Nicolas\",\r\n    \"email\": \"Nicolas@teste.com\",\r\n    \"password\": \"1Nik!!!sss\"\r\n}"
@@ -63,7 +75,13 @@
 					"name": "CreateUser",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\": \"Nicolas\",\r\n    \"email\": \"Nicolas@teste.com\",\r\n    \"password\": \"1Nik!!!sss\"\r\n}",
@@ -90,7 +108,13 @@
 					"name": "UpdateUser",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \r\n}",
@@ -117,7 +141,13 @@
 					"name": "RemoveUser",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\": \"Nicolas\",\r\n    \"email\": \"Nicolas@teste.com\",\r\n    \"password\": \"1Nik!!!sss\"\r\n}"
@@ -147,7 +177,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Luiz\",\r\n    \"email\": \"LuizED@teste.com\",\r\n    \"password\": \"Man1@123aas\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Paulo\",\r\n    \"email\": \"Paulo@teste.com\",\r\n    \"password\": \"P4ul0asde!asdde\",\r\n    \"role\": \"ADMIN\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -257,7 +287,13 @@
 					"name": "FindAllBook",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/book",
 							"host": [
@@ -274,7 +310,13 @@
 					"name": "FindOneBook",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/book/1",
 							"host": [
@@ -292,7 +334,13 @@
 					"name": "CreateBook",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"title\": \"teste\",\r\n    \"author\": \"teste\",\r\n    \"category\": \"teste\"\r\n}",
@@ -319,7 +367,13 @@
 					"name": "UpdateBook",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"title\": \"O Código Da Vinci\",\r\n    \"author\": \"Dan Brown\",\r\n    \"category\": \"suspense\"\r\n}",
@@ -346,7 +400,13 @@
 					"name": "RemoveBook",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/book/3",
 							"host": [
@@ -369,10 +429,16 @@
 					"name": "BorrowLoans",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"bookId\": 20,\r\n    \"borrowerId\": 4\r\n}",
+							"raw": "{\r\n    \"bookId\": 5,\r\n    \"borrowerId\": 4\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -380,30 +446,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/loans/borrow",
+							"raw": "{{base_url}}/loans/borrow/",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"loans",
-								"borrow"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GetAllLoans",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/loans",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"loans"
+								"borrow",
+								""
 							]
 						}
 					},
@@ -413,10 +463,16 @@
 					"name": "ReturnLoans",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"loanId\": 1\r\n}",
+							"raw": "{\r\n    \"loanId\": 4\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -431,6 +487,29 @@
 							"path": [
 								"loans",
 								"return"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllLoans",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwt}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/loans",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"loans"
 							]
 						}
 					},
@@ -478,8 +557,11 @@
 	"variable": [
 		{
 			"key": "base_url",
-			"value": "http://localhost:3000",
-			"type": "string"
+			"value": "http://localhost:3000"
+		},
+		{
+			"key": "jwt",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IlBhdWxvIiwiZW1haWwiOiJQYXVsb0B0ZXN0ZS5jb20iLCJpYXQiOjE3NTc0OTYxOTksImV4cCI6MTc1ODEwMDk5OSwiYXVkIjoidXNlciIsImlzcyI6ImxvZ2luIiwic3ViIjoiNSJ9.IykVJ1pT0895CF0YUSqM7R_tJQ-VMslHOhmx61frq9I"
 		}
 	]
 }

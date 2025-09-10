@@ -5,9 +5,16 @@ import { AuthModule } from '../auth/auth.module';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { APP_GUARD } from '@nestjs/core';
 import { ThrottlerGuard } from '@nestjs/throttler';
+import { PrismaModule } from 'src/prisma/prismaModule';
+import { UserModule } from '../user/user.module';
 
 @Module({
-  imports: [forwardRef(() => AuthModule)],
+  imports: [
+    PrismaModule,
+    forwardRef(() => AuthModule),
+    forwardRef(() => UserModule)
+
+  ],
   controllers: [BookController],
   providers: [BookService, PrismaService, {
     provide: APP_GUARD,

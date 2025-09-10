@@ -14,8 +14,12 @@ import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { Roles } from 'src/decorators/roles.decorators';
 import { Role } from '../enums/role.enum';
+import { RoleGuard } from 'src/guards/role.guard';
+import { AuthGuard } from 'src/guards/auth.guard';
 
-@Roles(Role.Admin)
+@Roles(Role.Teacher, Role.Admin, Role.Coordinator)
+@UseGuards(AuthGuard, RoleGuard)
+
 @Controller('user')
 export class UserController {
   constructor(private readonly userService: UserService) {}

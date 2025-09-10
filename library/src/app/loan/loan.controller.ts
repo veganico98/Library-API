@@ -4,10 +4,13 @@ import { CreateLoanDto } from './dto/create-loan.dto';
 import { ReturnLoanDto } from './dto/return-loan.dto';
 import { Role } from 'src/app/enums/role.enum';
 import { Roles } from 'src/decorators/roles.decorators';
+import { RoleGuard } from 'src/guards/role.guard';
+import { AuthGuard } from 'src/guards/auth.guard';
+import { UserRole } from '@prisma/client';
 
-@Roles(Role.Admin,Role.User)
+@Roles(Role.Admin, Role.Coordinator, Role.Student, Role.Teacher)
 @Controller('loans')
-// @UseGuards(AuthGuard, RoleGuard)
+@UseGuards(AuthGuard, RoleGuard)
 export class LoanController {
   constructor(private readonly loanService: LoanService) {}
 
