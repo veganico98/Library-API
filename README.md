@@ -83,7 +83,3 @@ Na raiz do projeto tem a **collection do Postman** com variáveis pré-configura
 - `{{jwt}}` → Token JWT obtido após login  
 
 ---
-
-## 👨‍💻 Autor
-
-Projeto desenvolvido como **trabalho final da disciplina API Biblioteca**.  
