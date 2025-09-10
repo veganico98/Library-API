@@ -6,6 +6,7 @@ import { UserModule } from './app/user/user.module';
 import { ThrottlerModule } from '@nestjs/throttler';
 import { ConfigModule } from '@nestjs/config';
 import { BookModule } from './app/book/book.module';
+import { LoanModule } from './app/loan/loan.module';
 
 @Module({
   imports: [
@@ -20,7 +21,8 @@ import { BookModule } from './app/book/book.module';
     }),
     forwardRef(() => UserModule),
     forwardRef(() => AuthModule),
-    forwardRef(() => BookModule)
+    forwardRef(() => BookModule),
+    forwardRef(() => LoanModule),
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -7,7 +7,7 @@ import { ThrottlerGuard } from '@nestjs/throttler';
 import { PrismaModule } from 'src/prisma/prismaModule';
 
 @Module({
-  imports: [forwardRef(() => AuthModule), PrismaModule], // ✅ importa PrismaModule
+  imports: [forwardRef(() => AuthModule), PrismaModule],
   controllers: [UserController],
   providers: [
     UserService,
