@@ -1,4 +1,4 @@
-# 📚 Biblioteca API
+# 📚 Biblioteca API DDD
 
 API de biblioteca escolar desenvolvida com **NestJS**, **Prisma** e **MySQL**.  
 Possui autenticação JWT, controle de papéis de usuário, CRUD de livros e fluxo de empréstimo/devolução.  
