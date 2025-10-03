@@ -1,4 +1,4 @@
-# 📚 Biblioteca API
+# 📚 Biblioteca API DDD
 
 API de biblioteca escolar desenvolvida com **NestJS**, **Prisma** e **MySQL**.  
 Possui autenticação JWT, controle de papéis de usuário, CRUD de livros e fluxo de empréstimo/devolução.  
@@ -80,7 +80,8 @@ npm run start:dev
 Na raiz do projeto tem a **collection do Postman** com variáveis pré-configuradas:  
 
 - `{{base_url}}` → URL da API (ex: `http://localhost:3000`)  
-- `{{jwt}}` → Token JWT obtido após login  
+- `{{jwt}}` → Token JWT obtido após login
+- Utilize em Headers -> Key: Authorization, Value: Bearer {{jwt}}
 
 ---
 
